@@ -12,7 +12,8 @@ html{
              width: 0.5rem;
          }
          &::-webkit-scrollbar-thumb{
-             background-color: red;
+             background-color: #adadad;
+             border-radius: 3px;
          }
          &::-webkit-scrollbar-track{
              background-color: white;

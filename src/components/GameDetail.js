@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
+//Media Resize
+import { smallImage } from "../util";
 const GameDetail = () => {
   const history = useHistory();
   //Exit Detail
@@ -39,14 +41,18 @@ const GameDetail = () => {
               </Info>
             </Stats>
             <Media>
-              <img src={game.background_image} alt="game" />
+              <img src={smallImage(game.background_image, 1280)} alt="game" />
             </Media>
             <Description>
               <p>{game.description_raw}</p>
             </Description>
             <div className="gallery">
               {screen.map((screen) => (
-                <img src={screen.image} key={screen.id} alt="game" />
+                <img
+                  src={smallImage(screen.image, 1280)}
+                  key={screen.id}
+                  alt="game"
+                />
               ))}
             </div>
           </Detail>
@@ -69,11 +75,12 @@ const CardShadow = styled(motion.div)`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: blue;
+    background-color: rgb(184, 184, 184);
+    border-radius: 3px;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: white;
+    background-color: #7f7f7f;
   }
 `;
 
