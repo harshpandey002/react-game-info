@@ -25,9 +25,9 @@ const getCurrentDay = () => {
 const currentYear = new Date().getFullYear();
 const currentMonth = getCurrentMonth();
 const currentDay = getCurrentDay();
-const currentDate = `${currentYear}-${currentDay}-${currentMonth}`;
-const lastYear = `${currentYear - 1}-${currentDay}-${currentMonth}`;
-const nextYear = `${currentYear + 1}-${currentDay}-${currentMonth}`;
+const currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
+const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
+const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
 //Popular Games
 const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
