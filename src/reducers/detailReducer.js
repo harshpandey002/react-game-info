@@ -1,5 +1,5 @@
 const initialState = {
-  game: {},
+  game: { platforms: [] },
   screen: [],
 };
 
