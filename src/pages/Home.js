@@ -4,6 +4,7 @@ import GameDetail from "../components/GameDetail";
 import { useDispatch, useSelector } from "react-redux";
 import { loadGames } from "../actions/gamesAction";
 //Components
+import Nav from "../components/Nav";
 import Game from "../components/Game";
 //Styling and Animation
 import styled from "styled-components";
@@ -24,6 +25,7 @@ const Home = () => {
 
   return (
     <GameList>
+      <Nav />
       <AnimateSharedLayout type="crossfade">
         <AnimatePresence>
           {pathId && <GameDetail pathId={pathId} />}
