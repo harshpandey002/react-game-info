@@ -74,7 +74,7 @@ const GameDetail = ({ pathId }) => {
               <div className="rating">
                 <motion.h3 layoutId={`title $(pathId)`}>{game.name}</motion.h3>
                 <p>Rating: {game.rating}</p>
-                {getStars()}
+                <Stars>{getStars()}</Stars>
               </div>
               <Info>
                 <h3>Platforms</h3>
@@ -97,7 +97,7 @@ const GameDetail = ({ pathId }) => {
               />
             </Media>
             <Description>
-              <p>{game.description_raw}</p>
+              <p>{game.description_raw || game.description.slice(3, -9)}</p>
             </Description>
             <div className="gallery">
               {screen.map((screen) => (
@@ -150,6 +150,9 @@ const Detail = styled(motion.div)`
   img {
     width: 100%;
   }
+  @media only screen and (max-width: 950px) {
+    padding: 2rem 1.5rem;
+  }
 `;
 
 const Stats = styled(motion.div)`
@@ -161,10 +164,21 @@ const Stats = styled(motion.div)`
     height: 2rem;
     display: inline;
   }
+  @media only screen and (max-width: 680px) {
+    flex-direction: column;
+    p {
+      margin-bottom: 1rem;
+    }
+  }
 `;
 
 const Info = styled(motion.div)`
   text-align: center;
+  @media only screen and (max-width: 680px) {
+    h3 {
+      display: none;
+    }
+  }
 `;
 
 const Platforms = styled(motion.div)`
@@ -172,6 +186,17 @@ const Platforms = styled(motion.div)`
   justify-content: space-evenly;
   img {
     margin-left: 3rem;
+  }
+  @media only screen and (max-width: 680px) {
+    img {
+      margin-left: 1rem;
+    }
+  }
+`;
+
+const Stars = styled(motion.div)`
+  @media only screen and (max-width: 680px) {
+    display: none;
   }
 `;
 
@@ -184,6 +209,9 @@ const Media = styled(motion.div)`
 
 const Description = styled(motion.div)`
   margin: 5rem 0rem;
+  @media only screen and (max-width: 680px) {
+    margin: 2rem 0rem;
+  }
 `;
 
 export default GameDetail;

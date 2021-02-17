@@ -1,8 +1,9 @@
 # react-game-info
 
-This application fetches data from an API about the Upcoming, Popular and Newly released games.\
-Info like Release Date, Rating, supported Platforms and Gameplay Screenshots are fetched and displayed.\
-Information for specific games can also be searched by the user.
+This application is deployed using Netlify.\
+Info like Release Date, Rating, supported Platforms and Gameplay Screenshots are fetched from the API and displayed.\
+Information for specific games can also be searched by the user.\
+This application is created for the purpose of learning Redux and fetching data from API.
 
 ## Available Scripts
 

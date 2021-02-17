@@ -40,7 +40,7 @@ const StyledNav = styled(motion.div)`
   padding: 3rem 5rem;
   text-align: center;
   input {
-    width: 30%;
+    width: 40%;
     font-size: 1.5rem;
     padding: 0.5rem;
     border: none;
@@ -56,6 +56,15 @@ const StyledNav = styled(motion.div)`
     background-color: #ff7676;
     color: white;
   }
+  @media only screen and (max-width: 1000px) {
+    padding: 3rem 2rem;
+    input {
+      width: 70%;
+    }
+    button {
+      padding: 0.5rem 1rem;
+    }
+  }
 `;
 
 const Logo = styled(motion.div)`
@@ -67,5 +76,7 @@ const Logo = styled(motion.div)`
     width: 2rem;
   }
 `;
+
+const Form = styled(motion.form)``;
 
 export default Nav;
