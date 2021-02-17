@@ -57,7 +57,7 @@ const StyledNav = styled(motion.div)`
     color: white;
   }
   @media only screen and (max-width: 1000px) {
-    padding: 3rem 2rem;
+    padding: 3rem 2rem 0 2rem;
     input {
       width: 70%;
     }

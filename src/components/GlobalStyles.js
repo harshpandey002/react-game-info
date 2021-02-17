@@ -35,11 +35,17 @@ html{
      font-size: 1.3rem;
      color: #333;
      padding: 1.5rem 0rem;
-     @media only screen and (max-width: 680px){
+     
+ }
+
+ .rating{
+    @media only screen and (max-width: 680px){
+        h3{
          text-align: center;
-         font-size: 2rem;
+        }
      }
  }
+
  p{
      font-size: 1.2rem;
      line-height:200%;
